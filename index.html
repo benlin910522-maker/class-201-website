@@ -183,7 +183,7 @@
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
-
+        ScrollTrigger.normalizeScroll(true);
         // 1. Sticky Header
         ScrollTrigger.create({
             start: 'top -50',
@@ -310,3 +310,4 @@
     </script>
 </body>
 </html>
+
