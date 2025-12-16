@@ -44,7 +44,7 @@
             </button>
         </div>
 
-        <div id="mobileMenu" class="fixed inset-0 bg-slate-900/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="mobileMenu" class="fixed inset-0 bg-slate-900 z-40 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300">
             <a href="#about" class="mobile-link text-3xl font-bold text-amber-50 hover:text-yellow-400">班級介紹</a>
             <a href="#activities" class="mobile-link text-3xl font-bold text-amber-50 hover:text-yellow-400">活動剪影</a>
             <a href="#contact" class="mobile-link text-3xl font-bold text-amber-50 hover:text-yellow-400">聯絡我們</a>
@@ -120,14 +120,14 @@
                 <div class="md:w-1/2 relative z-10">
                     <img src="card.jpg" class="w-full h-[50vh] md:h-[60vh] object-cover rounded shadow-lg border-4 border-white/10 transform rotate-[-2deg]">
                 </div>
-                <div class="md:w-1/2 relative z-20 bg-slate-900/80 p-6 rounded-xl border border-slate-700 backdrop-blur-md">
+                <div class="md:w-1/2 relative z-20 bg-slate-900 p-6 rounded-xl border border-slate-700 shadow-xl">
                     <h3 class="text-3xl font-bold mb-4 text-yellow-400">手寫教師節卡片</h3>
                     <p class="text-xl text-slate-200">孩子們用稚嫩的筆跡，寫下對校長與老師的感謝。每一筆都是溫暖的祝福。</p>
                 </div>
             </div>
 
             <div class="w-screen h-full flex flex-col md:flex-row items-center justify-center p-10 md:p-32 space-y-8 md:space-y-0 md:space-x-16 bg-slate-800 border-r border-slate-700 relative">
-                <div class="md:w-1/2 order-2 md:order-1 relative z-20 bg-slate-800/80 p-6 rounded-xl border border-slate-600 backdrop-blur-md">
+                <div class="md:w-1/2 order-2 md:order-1 relative z-20 bg-slate-800 p-6 rounded-xl border border-slate-600 shadow-xl">
                     <h3 class="text-3xl font-bold mb-4 text-yellow-400">社區服務學習</h3>
                     <p class="text-xl text-slate-200">拿起掃把，走進社區。我們學會了愛護環境，也體會了付出的快樂。</p>
                 </div>
@@ -140,7 +140,7 @@
                 <div class="md:w-1/2 relative z-10">
                     <img src="piano.jpg" class="w-full h-[50vh] md:h-[60vh] object-cover rounded shadow-lg border-4 border-white/10 transform rotate-[-1deg]">
                 </div>
-                <div class="md:w-1/2 relative z-20 bg-slate-900/80 p-6 rounded-xl border border-slate-700 backdrop-blur-md">
+                <div class="md:w-1/2 relative z-20 bg-slate-900 p-6 rounded-xl border border-slate-700 shadow-xl">
                     <h3 class="text-3xl font-bold mb-4 text-yellow-400">才藝表演：小蜜蜂</h3>
                     <p class="text-xl text-slate-200">音樂課的成果發表，指尖在琴鍵上跳舞，奏出最純真的旋律。</p>
                 </div>
@@ -183,12 +183,15 @@
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
+
+        // 加入這一行優化手機滾動效能
         ScrollTrigger.normalizeScroll(true);
+
         // 1. Sticky Header
         ScrollTrigger.create({
             start: 'top -50',
             end: 99999,
-            toggleClass: {className: 'bg-slate-900/95 shadow-lg py-4', targets: '#navbar'}
+            toggleClass: {className: 'bg-slate-900 shadow-lg py-4', targets: '#navbar'}
         });
 
         // 2. Hero Parallax
@@ -310,4 +313,3 @@
     </script>
 </body>
 </html>
-
